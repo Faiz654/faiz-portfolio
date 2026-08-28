@@ -1,0 +1,93 @@
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed, 100);
+  background-color: var(--body-color, #fafafa);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Change background header on scroll */
+.scroll-header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/*=============== NAV ELEMENTS ===============*/
+.nav__logo {
+  color: var(--title-color, #333333);
+  font-weight: 600 !important; /* Clean semi-bold look */
+  font-size: 1.75rem;
+  text-decoration: none;
+}
+
+.nav__logo:hover {
+  color: var(--title-color-dark, #000000);
+}
+
+.nav__toggle {
+  color: var(--title-color, #333333);
+}
+
+.nav__list {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size, 0.813rem);
+  color: var(--text-color, #757575);
+  transition: .3s;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Custom weight control for the Navigation Links Text */
+.nav__link span {
+  font-weight: 500 !important; /* Perfect medium-bold balance */
+}
+
+/* Hover & Active Link Settings */
+.nav__link:hover,
+.active-link {
+  color: var(--title-color-dark, #000000) !important;
+}
+
+/* Animated Black Line Underline Effect */
+.nav__link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav__link:hover::after,
+.active-link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*=============== MOBILE RESPONSIVENESS (Below Desktop) ===============*/
+@media screen and (max-width: 991px) {
+  .nav__link::after {
+    display: none; /* Disables underline animation structure on mobile stack layout */
+  }
+}
+
+/* Forces the badge text to be extra bold and readable */
+.nav__logo, .footer__title {
+  font-weight: 800 !important; /* Maximum bold strength */
+  letter-spacing: 0.5px;       /* Adds subtle spacing so bold letters don't overlap */
+}
+

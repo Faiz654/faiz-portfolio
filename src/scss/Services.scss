@@ -1,0 +1,284 @@
+/*=============== SERVICES ===============*/
+
+.services__container {
+  grid-template-columns: repeat(2, 270px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.services__content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 6rem 0 2rem 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.services__content:hover {
+  transform: translateY(-4px);
+}
+
+.services__icon-main {
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.services__title {
+  font-family: "Comfortaa", "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700 !important;
+  color: #333333;
+  line-height: 1.4;
+}
+
+.services__button {
+  color: #333333;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700 !important;
+
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+
+  cursor: pointer;
+  margin-top: 1.5rem;
+
+  transition: 0.3s;
+}
+
+.services__button:hover .services__button-icon {
+  transform: translateX(4px);
+}
+
+.services__button-icon {
+  transition: 0.3s;
+}
+
+
+/*=============== MODAL ===============*/
+
+.services__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0s linear 0.2s;
+}
+
+.services__modal.active-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0s linear 0s;
+}
+
+
+/*=============== MODAL CONTENT ===============*/
+
+.services__modal-content {
+  position: relative;
+
+  width: 500px;
+  max-width: 100%;
+
+  background-color: #ffffff;
+
+  padding: 4.5rem 2.5rem 2.5rem;
+
+  border-radius: 1.5rem;
+
+  transform: scale(0.96) translateY(8px);
+
+  transition: transform 0.2s ease;
+}
+
+.services__modal.active-modal .services__modal-content {
+  transform: scale(1) translateY(0);
+}
+
+
+/*=============== CLOSE BUTTON ===============*/
+
+.services__modal-close {
+  position: absolute;
+
+  top: 1.25rem;
+  right: 1.25rem;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #333333;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.services__modal-close:hover {
+  transform: rotate(90deg);
+}
+
+
+/*=============== MODAL TITLE ===============*/
+
+.services__modal-title {
+  font-family: "Comfortaa", "Quicksand", sans-serif;
+
+  font-size: 1.25rem;
+  font-weight: 800 !important;
+
+  color: #333333;
+
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+
+/*=============== MODAL DESCRIPTION ===============*/
+
+.services__modal-description {
+  font-family: "Quicksand", sans-serif;
+
+  text-align: center;
+
+  font-size: 0.95rem;
+
+  color: #555555;
+
+  margin-bottom: 2rem;
+
+  line-height: 1.6;
+
+  font-weight: 600 !important;
+}
+
+
+/*=============== MODAL SERVICES ===============*/
+
+.services__modal-services {
+  row-gap: 1rem;
+
+  list-style: none;
+
+  padding-left: 0;
+  margin: 0;
+}
+
+.services__modal-service {
+  display: flex;
+  align-items: flex-start;
+
+  column-gap: 0.75rem;
+}
+
+.services__modal-check {
+  color: #333333;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  line-height: 1.5;
+
+  min-width: 16px;
+}
+
+.services__modal-info {
+  font-family: "Quicksand", sans-serif;
+
+  font-size: 0.875rem;
+
+  color: #555555;
+
+  font-weight: 600 !important;
+
+  margin-bottom: 0;
+
+  line-height: 1.5;
+}
+
+
+/*=============== RESPONSIVE ===============*/
+
+@media screen and (max-width: 768px) {
+
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .services__content {
+    padding: 4.5rem 0 2rem 1.5rem;
+  }
+
+  .services__modal-content {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+
+  .services__container {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .services__modal {
+    padding: 1rem;
+  }
+
+  .services__modal-content {
+    padding: 4.5rem 1.5rem 2.5rem;
+
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .services__modal-title {
+    font-size: 1.15rem;
+  }
+
+  .services__modal-description {
+    font-size: 0.9rem;
+  }
+
+  .services__modal-info {
+    font-size: 0.82rem;
+  }
+}

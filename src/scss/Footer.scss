@@ -1,0 +1,77 @@
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: var(--container-color, #ffffff);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 0 6rem; /* Bottom padding accounts for mobile nav spacing from video */
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__title {
+  color: var(--title-color, #333333);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer__link {
+  color: var(--title-color, #333333);
+  text-decoration: none;
+  font-size: var(--small-font-size, 0.813rem);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--title-color-dark, #000000);
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.footer__social-link {
+  background-color: var(--title-color, #333333);
+  color: var(--container-color, #ffffff);
+  font-size: 1.25rem;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer__social-link:hover {
+  background-color: var(--title-color-dark, #000000);
+}
+
+.footer__copy {
+  display: block;
+  font-size: var(--smaller-font-size, 0.75rem);
+  color: var(--text-color, #757575);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Desktop view balancing spacing adjustment */
+@media screen and (min-width: 992px) {
+  .footer {
+    padding: 3rem 0 3rem;
+  }
+}

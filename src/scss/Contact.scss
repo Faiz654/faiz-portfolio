@@ -1,0 +1,196 @@
+/*=============== CONTACT ===============*/
+
+.contact__container {
+  grid-template-columns: 1fr 1.5fr;
+  column-gap: 4rem;
+  max-width: 968px;
+}
+
+.contact__information {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+}
+
+.contact__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+  color: #333;
+  width: 30px;
+}
+
+.contact__title {
+  font-family: "Comfortaa", "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 800 !important;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.contact__subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600 !important;
+  color: #777;
+}
+
+
+/*=============== FORM ===============*/
+
+.contact__form {
+  display: grid;
+  row-gap: 1.4rem;
+}
+
+.contact__form-div {
+  position: relative;
+}
+
+.contact__form-div label {
+  position: absolute;
+  top: -0.55rem;
+  left: 1rem;
+
+  padding: 0 0.35rem;
+  background: #fff;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  color: #555;
+  z-index: 1;
+}
+
+.contact__form-div input,
+.contact__form-div textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.75rem;
+
+  outline: none;
+  background: #fff;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  color: #333;
+
+  transition: 0.3s;
+}
+
+.contact__form-div input:focus,
+.contact__form-div textarea:focus {
+  border-color: #333;
+}
+
+.contact__form-div textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+
+/*=============== BUTTON ===============*/
+
+.contact__button {
+  justify-self: start;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700 !important;
+
+  min-width: 140px;
+}
+
+.contact__button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+/*=============== LOADER ===============*/
+
+.contact__loader {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*=============== STATUS ===============*/
+
+.contact__status {
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.contact__status.success {
+  background: #f1f8f3;
+  color: #287a45;
+}
+
+.contact__status.error {
+  background: #fff2f2;
+  color: #b83232;
+}
+
+
+/*=============== RESPONSIVE ===============*/
+
+@media screen and (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact__container {
+    column-gap: 0;
+  }
+
+  .contact__information {
+    row-gap: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact__title {
+    font-size: 0.9rem;
+  }
+
+  .contact__subtitle {
+    font-size: 0.75rem;
+  }
+}

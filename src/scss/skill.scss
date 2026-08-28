@@ -1,0 +1,91 @@
+/*=============== SKILLS LAYOUT CONTAINER ===============*/
+.skills__container {
+  grid-template-columns: repeat(2, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.skills__content {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem 4rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Rounded Header Typography Matching Home/About Theme */
+.skills__title {
+  font-family: 'Comfortaa', 'Quicksand', 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700 !important;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills__box {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.5rem;
+}
+
+.skills__group {
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1.25rem;
+}
+
+.skills__data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+/* Modern Checkmark Vector Custom Colors */
+.skills__icon {
+  color: #333333;
+  margin-top: 0.25rem;
+}
+
+/* Soft Typography Configuration Rules */
+.skills__name {
+  font-family: 'Comfortaa', 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 700 !important; /* Prominent bold list items */
+  color: #333333;
+  line-height: 1.2;
+}
+
+.skills__level {
+  font-family: 'Quicksand', 'Nunito', sans-serif;
+  font-size: 0.75rem;
+  color: #757575;
+  font-weight: 600 !important; /* Thick modern readability status labels */
+}
+
+/*=============== RESPONSIVE MEDIA CONSTRAINTS VIEW ===============*/
+@media screen and (max-width: 992px) {
+  .skills__container {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills__box {
+    column-gap: 1.25rem;
+  }
+  
+  .skills__name {
+    font-size: 0.9rem;
+  }
+}
