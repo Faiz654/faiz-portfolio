@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import Qualification from "./pages/qualification";
+import Qualification from "./pages/Qualification";
 import Services from "./pages/Services";
 import Skills from "./pages/Skill";
 import Testimonial from "./pages/Testimonial";

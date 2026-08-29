@@ -1,4 +1,4 @@
-import "../scss/qualification.scss";
+import "../scss/Qualification.scss";
 import  { useState } from "react";
 
 const Qualification = () => {
