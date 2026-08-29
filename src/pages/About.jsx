@@ -1,5 +1,5 @@
 
-import React from "react";
+
 import "../scss/About.scss";
 import AboutImg from "../assets/profile.jpg";
 

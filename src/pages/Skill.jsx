@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ".././scss/skill.scss";
 
 const Skills = () => {
